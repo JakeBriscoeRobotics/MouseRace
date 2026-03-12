@@ -10,6 +10,13 @@ void setup() {
   pinMode(leftMotorPin, INPUT);
   pinMode(rightMotorPin, INPUT);
 }
+//rsh56
+void updateMotors(int leftPwmValue, int rightPwmValue) {
+
+  analogWrite(leftMotorPin, leftPwmValue);
+  analogWrite(rightMotorPin, rightPwmValue);
+
+}
 //yf694
 void calcPwmVal(float leftSpeedNorm, float rightSpeedNorm) {
 
@@ -60,8 +67,10 @@ void feedbackControl(int leftSensorPosition, int rightSensorPosition) {
   return leftSpeedNorm,rightSpeedNorm;
 }
 
-void loop() {
+//rsh56
+void loop( ) {
   // put your main code here, to run repeatedly:
-  delay(5)
+  delay(5);
+  updateMotors(leftPwmValue, rightPwmValue);
   leftSensorValue,rightSensorValue = readSensor();
 }
