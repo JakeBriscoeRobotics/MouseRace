@@ -26,6 +26,13 @@ void calcPwmVal(float leftSpeedNorm, float rightSpeedNorm) {
 
 }
 
+//vl375
+void readSensor(){
+  leftSensorValue = AnalogRead(leftProbePin);
+  rightSensorValue = AnalogRead(rightProbePin);
+  return leftSensorValue,rightSensorValue;
+}
+
 //jb3804
 void feedbackControl(int leftSensorPosition, int rightSensorPosition) {
   //Adjust to make base speed 2.4V as required by rupert
@@ -55,5 +62,6 @@ void feedbackControl(int leftSensorPosition, int rightSensorPosition) {
 
 void loop() {
   // put your main code here, to run repeatedly:
-
+  delay(5)
+  leftSensorValue,rightSensorValue = readSensor();
 }
