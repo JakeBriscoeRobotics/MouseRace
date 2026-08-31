@@ -10,3 +10,4 @@ Implement PID control to allow it to self correct. Use normalised values to ensu
 as the magnitude increases as the probes get closer to the copper trace during incline sections of track. Iteratively tweak PID values to optimise
 for speed turns, and override PID on known straight sections of track to ensure competitive completion time.
 
+<img width="750" height="520" alt="PHOTO-2026-04-08-18-44-53" src="https://github.com/user-attachments/assets/7518aa4e-d726-4b54-9cb9-13a6cfb21fe3" />
